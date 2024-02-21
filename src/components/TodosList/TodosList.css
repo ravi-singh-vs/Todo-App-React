@@ -1,0 +1,6 @@
+.todo-container{
+    padding:  0rem 1rem;
+    min-height: 70vh;
+    max-height: 70vh;
+    overflow: scroll;
+}

@@ -1,0 +1,46 @@
+.todo-card{
+    padding: 1.3rem 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1rem 0;
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.todo-card .todo-content{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.todo-card .todo-content input[type="checkbox"]{
+   width: 1.4rem;
+   height : 1.4rem
+}
+.todo-card .todo-content input[type="text"]{
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    border: none;
+    outline : none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+.todo-card .todo-content p{
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+
+.todo-card .btn-container button{
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    border: none;
+    /* border-radius: 5px; */
+}
+
+.cut{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
