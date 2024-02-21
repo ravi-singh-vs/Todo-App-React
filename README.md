@@ -1,8 +1,24 @@
-# React + Vite
+# Todo App with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Author :  Ravi Singh
 
-Currently, two official plugins are available:
+Features :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+``````
+1. Create Todos
+2. Edit Todos
+3. Delete Todos
+``````
+Steps to run Project :
+
+1. clone this repo
+2. Run the command given below to install all dependencies
+
+ ```
+ npm install
+ ```
+3. Run the command given below to run the project
+
+```
+npm run dev
+```
