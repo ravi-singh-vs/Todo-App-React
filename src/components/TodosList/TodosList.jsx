@@ -1,14 +1,14 @@
 import React from 'react'
 import "./TodosList.css"
 import TodoCard from "../TodoCard/TodoCard"
-const TodosList = ({todos , setTodos}) => {
+const TodosList = ({globalDisable,setGlobalDisable,todos , setTodos}) => {
 
     const taskCompletionHandler = (id) =>{
 
         const todosList = todos.map((todoItem)=>{
           if(todoItem.id===id)
           {
-            todoItem.isCompleted = !todoItem.isCompleted
+            return {...todoItem , isCompleted : !todoItem.isCompleted}
           }
           return todoItem;
         })
@@ -28,12 +28,11 @@ const TodosList = ({todos , setTodos}) => {
       }
     
       const editHandler = (id,editedTodo) =>{
-    
-    
+        
        const todosList = todos.map((todoItem)=>{
           if(todoItem.id===id)
           {
-            todoItem.todo = editedTodo;
+            return {...todoItem , todo : editedTodo, isEdited : true};
           }
           return todoItem;
        })
@@ -44,7 +43,7 @@ const TodosList = ({todos , setTodos}) => {
   return (
     <div className="todo-container">
       {
-        todos.map((todoItem)=> <TodoCard key={todoItem?.id} {...todoItem} taskCompletionHandler={taskCompletionHandler}  deleteHandler={ deleteHandler} editHandler={editHandler} />)
+        todos.map((todoItem)=> <TodoCard key={todoItem?.id} {...todoItem} taskCompletionHandler={taskCompletionHandler}  deleteHandler={ deleteHandler} editHandler={editHandler} globalDisable={globalDisable}  setGlobalDisable={setGlobalDisable} />)
       }
     </div>
   )

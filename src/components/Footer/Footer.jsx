@@ -6,8 +6,8 @@ const Footer = ({todos}) => {
 
   return (
     <footer>
-        <p>Total Tasks : {todos.length} </p>
-        <p>Completed  Tasks : {total}</p>
+        <p>Total Todos : {todos.length} </p>
+        <p>Completed Todos : {total}</p>
     </footer>
   )
 }
