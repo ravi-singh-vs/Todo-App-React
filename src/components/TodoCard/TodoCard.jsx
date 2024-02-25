@@ -81,12 +81,10 @@ const TodoCard = ({id ,isCompleted, isEdited, todo,taskCompletionHandler , delet
             >
               Save Edit
             </button>  
-
-           
            </>
           
            :
-           <button type='click' disabled={globalDisable}  className={globalDisable ? "disabled" : ""} onClick={()=> {
+           <button type='click' disabled={globalDisable || isCompleted}  className={globalDisable || isCompleted ? "disabled" : ""} onClick={()=> {
             setEditMode(true);
             setGlobalDisable(true)
            }}>Edit</button>
